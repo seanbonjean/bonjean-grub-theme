@@ -2,10 +2,12 @@
 
 本主题参考：[ClF3's blog](https://blog.clf3.org/post/grub-theme-tutorial/)
 
+还可参考：[voidlhf/StarRailGrubThemes](https://github.com/voidlhf/StarRailGrubThemes)
+
 ## 使用
 
 1. 将主题文件夹保存到`/boot/grub/themes`
-2. 编辑`/etc/default/grub`，添加如下内容指定GRUB主题文件的位置：
+2. 编辑`/etc/default/grub.d/90_custom.cfg`，添加如下内容指定GRUB主题文件的位置：
 
 ```
 GRUB_THEME="/boot/grub/themes/bonjean-grub-theme/GRUB_theme/theme.txt"

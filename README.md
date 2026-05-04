@@ -7,13 +7,14 @@
 ## 使用
 
 1. 将主题文件夹保存到`/boot/grub/themes`
-2. 编辑`/etc/default/grub.d/90_custom.cfg`，添加如下内容指定GRUB主题文件的位置：
+2. 编辑`/etc/default/grub.d/90_custom.cfg`或`/etc/default/grub`，添加如下内容指定GRUB主题文件的位置：
 
 ```
-GRUB_THEME="/boot/grub/themes/bonjean-grub-theme/GRUB_theme/theme.txt"
+GRUB_THEME="/boot/grub/themes/bonjean-grub-theme/GRUB_theme/theme.txt"  # 较新版本可能是/boot/grub2
+GRUB_TERMINAL_OUTPUT="gfxterm"  # 如果不起效，就修改这个
 ```
 
-3. 重新编译GRUB：`sudo update-grub`
+3. 重新编译GRUB：`sudo update-grub`或`sudo grub2-mkconfig -o /boot/grub2/grub.cfg`
 
 ## 文件说明
 
